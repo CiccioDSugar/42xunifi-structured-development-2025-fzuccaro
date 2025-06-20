@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.c                                       :+:      :+:    :+:   */
+/*   segmented_runs.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 15:33:17 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/17 11:14:22 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/11 16:31:20 by fzuccaro          #+#    #+#             */
+/*   Updated: 2025/06/11 17:12:55 by fzuccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void first_last(int arr[], int size, int target, int *first, int *last)
-{
-    int i;
+#ifndef SEGMENTED_RUNS_H
+#define SEGMENTED_RUNS_H
 
-    *first = -1;
-    *last = -1;
-    i = 0;
+int	count_segments(const int *arr, int size);
+int is_valid_sequence(const int *array, int start, int end);
 
-    while (i < size)
-    {
-        if (arr[i] == target)
-        {
-            if (*first == -1)
-                *first = i;
-            *last = i;
-        }
-        i++;
-    }
-}
+#endif

@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.c                                       :+:      :+:    :+:   */
+/*   average.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 15:33:17 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/17 11:14:22 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/11 14:49:04 by fzuccaro          #+#    #+#             */
+/*   Updated: 2025/06/11 15:30:29 by fzuccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void first_last(int arr[], int size, int target, int *first, int *last)
-{
-    int i;
+# ifndef AVERAGE_H
+#define AVERAGE_H
+#include <stdio.h> // For testing with printf.
 
-    *first = -1;
-    *last = -1;
-    i = 0;
+float   average(const int *arr, int size);
 
-    while (i < size)
-    {
-        if (arr[i] == target)
-        {
-            if (*first == -1)
-                *first = i;
-            *last = i;
-        }
-        i++;
-    }
-}
+#endif

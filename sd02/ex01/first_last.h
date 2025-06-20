@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.c                                       :+:      :+:    :+:   */
+/*   first_last.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 15:33:17 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/17 11:14:22 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/11 15:32:16 by fzuccaro          #+#    #+#             */
+/*   Updated: 2025/06/11 16:30:01 by fzuccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void first_last(int arr[], int size, int target, int *first, int *last)
-{
-    int i;
+#ifndef FIRST_LAST_H
+#define FIRST_LAST_H
 
-    *first = -1;
-    *last = -1;
-    i = 0;
+void first_last(int arr[], int size, int target, int *first, int *last);
 
-    while (i < size)
-    {
-        if (arr[i] == target)
-        {
-            if (*first == -1)
-                *first = i;
-            *last = i;
-        }
-        i++;
-    }
-}
+#endif

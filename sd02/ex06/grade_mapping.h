@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.c                                       :+:      :+:    :+:   */
+/*   grade_mapping.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 15:33:17 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/17 11:14:22 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/12 17:13:19 by fzuccaro          #+#    #+#             */
+/*   Updated: 2025/06/12 18:43:40 by fzuccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void first_last(int arr[], int size, int target, int *first, int *last)
+#ifndef GRADE_MAPPING_H
+#define GRADE_MAPPING_H
+
+typedef enum	GradeMapper
 {
-    int i;
+	PLUS_MINUS,
+	PASS_FAIL,
+	STANDARD
+}				GradeMapper;
 
-    *first = -1;
-    *last = -1;
-    i = 0;
 
-    while (i < size)
-    {
-        if (arr[i] == target)
-        {
-            if (*first == -1)
-                *first = i;
-            *last = i;
-        }
-        i++;
-    }
-}
+#endif

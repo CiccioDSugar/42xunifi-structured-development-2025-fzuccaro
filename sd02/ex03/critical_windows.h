@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_last.c                                       :+:      :+:    :+:   */
+/*   critical_windows.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 15:33:17 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/17 11:14:22 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/11 18:38:54 by fzuccaro          #+#    #+#             */
+/*   Updated: 2025/06/11 19:18:11 by fzuccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void first_last(int arr[], int size, int target, int *first, int *last)
-{
-    int i;
+#ifndef CRITICAL_WINDOWS_H
+#define CRITICAL_WINDOWS_H
+#include <stdbool.h>
 
-    *first = -1;
-    *last = -1;
-    i = 0;
+int count_critical_windows(const int *readings, int size);
 
-    while (i < size)
-    {
-        if (arr[i] == target)
-        {
-            if (*first == -1)
-                *first = i;
-            *last = i;
-        }
-        i++;
-    }
-}
+#endif
